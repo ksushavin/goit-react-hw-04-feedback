@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import css from 'components/FeedbackCounter/FeedbackCounter.module.css'
+// import css from 'components/FeedbackCounter/FeedbackCounter.module.css'
 
 export default function Notification ({ message }) {
     return (
