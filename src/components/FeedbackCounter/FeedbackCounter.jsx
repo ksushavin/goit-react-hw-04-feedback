@@ -1,11 +1,8 @@
 import React from 'react';
-
 import Statistics from 'components/FeedbackCounter/Statistics'
 import FeedbackOptions from 'components/FeedbackCounter/FeedbackOptions'
 import Section from 'components/FeedbackCounter/Section'
 import Notification from 'components/FeedbackCounter/Notification'
-
-
 
 export default class FeedbackCounter extends React.Component {
     static defaultProps = {
