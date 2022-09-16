@@ -8,23 +8,24 @@ export default function Statistics(props) {
         bad,
         total,
         positivePercentage } = props;
+    const { statisticsList, item, text } = css;
 
     return (
-        <ul className={css.statisticsList}>
-            <li className={css.item}>
-                <p className={css.text}>Good: {good}</p>
+        <ul className={statisticsList}>
+            <li className={item}>
+                <p className={text}>Good: {good}</p>
             </li>
-            <li className={css.item}>
-                <p className={css.text}>Neutral: {neutral}</p>
+            <li className={item}>
+                <p className={text}>Neutral: {neutral}</p>
             </li>
-            <li className={css.item}>
-                <p className={css.text}>Bad: {bad}</p>
+            <li className={item}>
+                <p className={text}>Bad: {bad}</p>
             </li>
-            <li className={css.item}>
-                <p className={css.text}>Total: {total}</p>
+            <li className={item}>
+                <p className={text}>Total: {total}</p>
             </li>
-            <li className={css.item}>
-                <p className={css.text}>Positive feedback: {positivePercentage}</p>
+            <li className={item}>
+                <p className={text}>Positive feedback: {positivePercentage}</p>
             </li>
         </ul>
     )

@@ -5,10 +5,6 @@ import Section from 'components/FeedbackCounter/Section'
 import Notification from 'components/FeedbackCounter/Notification'
 
 export default class FeedbackCounter extends React.Component {
-    static defaultProps = {
-        initialValue: 0,
-    }
-
     state = {
         good: 0,
         neutral: 0,
@@ -37,11 +33,11 @@ export default class FeedbackCounter extends React.Component {
     }
     
     render() {
-        const total = this.countTotalFeedback();
-        const positivePercentage = this.countPositiveFeedbackPercentage();
+        const { onLeaveFeedback, countTotalFeedback, countPositiveFeedbackPercentage } = this;
         const { good, neutral, bad } = this.state;
-        const { onLeaveFeedback } = this;
-
+        const total = countTotalFeedback();
+        const positivePercentage = countPositiveFeedbackPercentage();
+        
         return (
             <>
                 <Section title="Please leave feedback">

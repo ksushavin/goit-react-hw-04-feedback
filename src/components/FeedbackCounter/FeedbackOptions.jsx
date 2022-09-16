@@ -1,27 +1,27 @@
 import PropTypes from "prop-types";
 import css from 'components/FeedbackCounter/FeedbackCounter.module.css'
 
-export default function FeedbackOptions ({ onLeaveFeedback }) {
+export default function FeedbackOptions({ onLeaveFeedback }) {
+    const { counterControls, button } = css;
     return (
-        <div className={css.counterControls}>
+        <div className={counterControls}>
             <button 
                 onClick={() => onLeaveFeedback("good")}
-                className={`${css.button} ${css.btnGood}`} 
+                className={button} 
                 type="button">Good
             </button>
             <button 
                 onClick={() => onLeaveFeedback("neutral")}
-                className={`${css.button} ${css.btnGood}`} 
+                className={button} 
                 type="button">Neutral
             </button>
             <button 
                 onClick={() => onLeaveFeedback("bad")}
-                className={`${css.button} ${css.btnGood}`} 
+                className={button} 
                 type="button">Bad
             </button>
         </div>    
     )
-  
 }
 
 FeedbackOptions.propTypes = {
